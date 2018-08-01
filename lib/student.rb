@@ -4,6 +4,8 @@ class Student
 
   @@all = []
 
+
+# @ initialize starts an each loop of the arg(hash) passed in and returns the values of the hash
   def initialize(student_hash)
     student_hash.each {|k,v| self.send(("#{k}="),v)}
     @@all << self
